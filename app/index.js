@@ -1,11 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Pressable } from 'react-native';
+import { Link } from 'expo-router';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Testing changes in app for book-scanner!</Text>
-      <StatusBar style="auto" />
+      <Link href='/profile' asChild>
+      <Pressable>
+        <Text>Profile Page</Text>
+      </Pressable>
+      </Link>
     </View>
   );
 }
